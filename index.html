@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090b09">
+  <meta name="description" content="OFF THE GRID — a digital playground for games, fitness, discoveries and side quests.">
+  <title>OFF THE GRID — A place to get lost</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="noise"></div>
+  <header class="topbar">
+    <a class="brand" href="#home"><span class="brand-mark">◈</span> OFF THE GRID<span class="brand-dot">.</span></a>
+    <nav id="nav">
+      <a href="#arcade">ARCADE</a><a href="#10k">10K CLUB</a><a href="#vault">PS5 VAULT</a><a href="#discover">DISCOVER</a><a href="#cinema">CINEMA</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-label="Toggle navigation">☰</button>
+    <button class="admin-open" id="adminOpen">CONTROL ROOM ↗</button>
+  </header>
+
+  <main>
+    <section class="hero section" id="home">
+      <div class="hero-meta"><span class="live-dot"></span> YOUR PERSONAL INTERNET PLAYGROUND <span class="meta-right" id="clock">--:--:-- IST</span></div>
+      <div class="hero-copy">
+        <p class="eyebrow">NOT A PORTFOLIO. NOT A NORMAL WEBSITE.</p>
+        <h1>GO<br><span class="outline">OFF THE</span><br><span class="lime">GRID<span class="period">.</span></span></h1>
+        <div class="hero-bottom">
+          <p>A little corner of the internet for games, strange discoveries, personal quests and everything in between.</p>
+          <a class="round-link" href="#arcade" aria-label="Explore"><span>↓</span></a>
+        </div>
+      </div>
+      <div class="hero-stamp"><span>EST.</span><strong>20<br>26</strong><span>STAY<br>CURIOUS</span></div>
+      <div class="hero-foot"><span>SCROLL TO EXPLORE</span><span>01 / THE PORTAL</span></div>
+    </section>
+
+    <section class="ticker" aria-label="Motto"><div>PLAY MORE <b>✳</b> WALK MORE <b>✳</b> STAY CURIOUS <b>✳</b> TOUCH GRASS SOMETIMES <b>✳</b> PLAY MORE <b>✳</b> WALK MORE <b>✳</b> STAY CURIOUS <b>✳</b></div></section>
+
+    <section class="section" id="arcade">
+      <div class="section-head"><div><p class="eyebrow">01 / THE ARCADE</p><h2>PRESS PLAY<span class="lime">.</span></h2></div><p class="section-note">Small games. Big distractions.<br>Open a new tab and disappear.</p></div>
+      <div class="card-grid" id="gameGrid">
+        <article class="feature-card game-card"><div class="card-top"><span>01 — BROWSER GAME</span><span class="tag">PUZZLE</span></div><div class="game-art art-one"><span>∞</span></div><h3>INFINITE CRAFT</h3><p>Combine elements. Make the impossible. Lose track of time.</p><a class="text-link" target="_blank" rel="noopener" href="https://neal.fun/infinite-craft/">PLAY NOW ↗</a></article>
+        <article class="feature-card game-card"><div class="card-top"><span>02 — QUICK CHALLENGE</span><span class="tag">SKILL</span></div><div class="game-art art-two"><span>◯</span></div><h3>PERFECT CIRCLE</h3><p>How close can you get to drawing a perfect circle?</p><a class="text-link" target="_blank" rel="noopener" href="https://neal.fun/perfect-circle/">PLAY NOW ↗</a></article>
+        <article class="feature-card game-card"><div class="card-top"><span>03 — RANDOM FUN</span><span class="tag">CHAOS</span></div><div class="game-art art-three"><span>?</span></div><h3>THE USELESS WEB</h3><p>One click. One random website. Absolutely no purpose.</p><a class="text-link" target="_blank" rel="noopener" href="https://theuselessweb.com/">PLAY NOW ↗</a></article>
+      </div>
+      <p class="micro-note">More games coming soon. Add your own links in the Control Room.</p>
+    </section>
+
+    <section class="section club-section" id="10k">
+      <div class="section-head"><div><p class="eyebrow">02 / COMMUNITY CHALLENGE</p><h2>THE 10K<br><span class="lime">CLUB.</span></h2></div><p class="section-note">10,000 steps a day.<br>One foot in front of the other.</p></div>
+      <div class="club-layout">
+        <div class="club-panel">
+          <div class="panel-top"><span class="live-dot"></span> DAILY MOVEMENT PROTOCOL <span class="tag">OPEN CHALLENGE</span></div>
+          <div class="step-number"><span id="stepDisplay">0</span><small>/ 10,000 STEPS</small></div>
+          <div class="progress-track"><div id="stepProgress"></div></div>
+          <div class="progress-meta"><span id="stepPercent">0% COMPLETE</span><span id="stepStatus">START MOVING</span></div>
+          <div class="step-input-row"><label for="stepInput">LOG YOUR STEPS TODAY</label><div><input id="stepInput" type="number" min="0" max="100000" placeholder="e.g. 8500"><button class="lime-btn" id="logSteps">UPDATE</button></div></div>
+          <p class="micro-note" id="stepFeedback">Your entries are saved on this device in this demo version.</p>
+        </div>
+        <div class="club-stats">
+          <div class="stat-box"><span>CURRENT STREAK</span><strong id="streak">0 <small>DAYS</small></strong></div>
+          <div class="stat-box"><span>PERSONAL BEST</span><strong id="best">0 <small>STEPS</small></strong></div>
+          <div class="stat-box"><span>CHALLENGE DAYS HIT</span><strong id="daysHit">0</strong></div>
+          <div class="quote-box"><span class="eyebrow">DAILY REMINDER</span><p id="motivation">You don't need motivation. You need your shoes on.</p><button class="subtle-btn" id="newQuote">NEW REMINDER ↻</button></div>
+        </div>
+      </div>
+      <div class="calendar-wrap"><div class="calendar-title"><h3>YOUR LAST 14 DAYS</h3><span class="micro-note">A day lights up when you hit 10K.</span></div><div class="calendar" id="calendar"></div></div>
+      <p class="privacy-note">DEMO MODE · Your step data currently stays in this browser. A shared public leaderboard and multi-user accounts need a connected database before launch.</p>
+    </section>
+
+    <section class="section" id="vault">
+      <div class="section-head"><div><p class="eyebrow">03 / THE PS5 VAULT</p><h2>PRESS<br><span class="lime">START.</span></h2></div><p class="section-note">The backlog is real.<br>The free time is fictional.</p></div>
+      <div class="vault-panel">
+        <div class="vault-copy"><span class="tag">PLAYER PROFILE / 001</span><h3>THE<br>STORY MODE<br>PERSON.</h3><p>A space for the games worth getting lost in. Add your current plays, all-time favourites and wishlist through the Control Room.</p><div class="vault-pills"><span>OPEN WORLD</span><span>STORY DRIVEN</span><span>CINEMATIC</span></div></div>
+        <div class="vault-list" id="ps5List">
+          <div class="vault-game"><span class="game-index">01</span><div><strong>MARVEL'S SPIDER-MAN</strong><small>FAVOURITE / ACTION</small></div><span class="game-state">★</span></div>
+          <div class="vault-game"><span class="game-index">02</span><div><strong>GRAND THEFT AUTO V</strong><small>OPEN WORLD / CLASSIC</small></div><span class="game-state">↗</span></div>
+          <div class="vault-game"><span class="game-index">03</span><div><strong>ASSASSIN'S CREED</strong><small>ADVENTURE / EXPLORATION</small></div><span class="game-state">＋</span></div>
+          <div class="vault-game"><span class="game-index">04</span><div><strong>YOUR NEXT OBSESSION</strong><small>COMING SOON</small></div><span class="game-state">?</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section discover-section" id="discover">
+      <div class="section-head"><div><p class="eyebrow">04 / INTERNET RABBIT HOLES</p><h2>THE WEB IS<br><span class="lime">WEIRD.</span></h2></div><p class="section-note">Useful? Not really.<br>Worth opening? Absolutely.</p></div>
+      <div class="discovery-box">
+        <div class="discovery-symbol" id="discoverySymbol">✳</div>
+        <div><span class="eyebrow">RANDOM DISCOVERY GENERATOR</span><h3 id="discoveryName">FIND SOMETHING WEIRD.</h3><p id="discoveryDesc">A random corner of the internet is one click away.</p></div>
+        <button class="lime-btn" id="randomBtn">SURPRISE ME ↗</button>
+      </div>
+      <div class="discovery-links" id="discoveryLinks">
+        <a href="https://pointerpointer.com/" target="_blank" rel="noopener"><span>01</span> POINTER POINTER <b>↗</b></a>
+        <a href="https://www.window-swap.com/" target="_blank" rel="noopener"><span>02</span> WINDOW SWAP <b>↗</b></a>
+        <a href="https://theuselessweb.com/" target="_blank" rel="noopener"><span>03</span> THE USELESS WEB <b>↗</b></a>
+        <a href="https://neal.fun/" target="_blank" rel="noopener"><span>04</span> NEAL.FUN <b>↗</b></a>
+      </div>
+    </section>
+
+    <section class="section cinema-section" id="cinema">
+      <div class="section-head"><div><p class="eyebrow">05 / THE CINEMA</p><h2>ROLL THE<br><span class="lime">FOOTAGE.</span></h2></div><p class="section-note">Gaming clips, edits and<br>whatever deserves a replay.</p></div>
+      <div class="video-panel">
+        <div class="video-frame"><iframe src="https://www.youtube.com/embed?listType=user_uploads&list=curiouswolfgaming" title="Curious Wolf Gaming uploads" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe></div>
+        <div class="video-caption"><div><span class="tag">YOUTUBE CHANNEL</span><h3>CURIOUS WOLF GAMING</h3><p>Your channel uploads, right here in the grid.</p></div><a class="lime-btn" href="https://youtube.com/@curiouswolfgaming?si=5G9haZI9y6ru3gmE" target="_blank" rel="noopener">VISIT CHANNEL ↗</a></div>
+      </div>
+    </section>
+
+    <section class="section achievements-section" id="achievements">
+      <div class="section-head"><div><p class="eyebrow">06 / PROGRESS LOG</p><h2>UNLOCKED<br><span class="lime">ENERGY.</span></h2></div><p class="section-note">Tiny wins count.<br>Collect them all.</p></div>
+      <div class="achievement-grid" id="achievementGrid">
+        <div class="achievement"><span>◌</span><strong>FIRST STEPS</strong><small>Log your first walk</small><i id="achFirst">LOCKED</i></div>
+        <div class="achievement"><span>⚡</span><strong>10K DAY</strong><small>Hit 10,000 steps</small><i id="ach10k">LOCKED</i></div>
+        <div class="achievement"><span>▦</span><strong>CONSISTENCY</strong><small>Complete 3 challenge days</small><i id="ach3">LOCKED</i></div>
+        <div class="achievement"><span>✦</span><strong>GRID BREAKER</strong><small>Discover a new website</small><i id="achDiscover">LOCKED</i></div>
+      </div>
+    </section>
+
+    <section class="secret-section" id="secret">
+      <div class="secret-inner"><span class="eyebrow">YOU FOUND THE SIDE DOOR</span><h2>NOT EVERYTHING<br>IS ON THE GRID<span class="lime">.</span></h2><p>Some things are better left undiscovered. Or maybe not.</p><button class="outline-btn" id="secretBtn">OPEN THE SECRET ROOM ↗</button><div id="secretMessage" class="secret-message hidden">ACCESS GRANTED. You're officially too curious for your own good. <span>✳</span></div></div>
+    </section>
+  </main>
+
+  <footer><a class="brand" href="#home">◈ OFF THE GRID<span class="brand-dot">.</span></a><span>BUILT FOR THE CURIOUS.</span><a href="https://youtube.com/@curiouswolfgaming?si=5G9haZI9y6ru3gmE" target="_blank" rel="noopener">CURIOUS WOLF GAMING ↗</a></footer>
+
+  <div class="modal-backdrop hidden" id="adminModal">
+    <div class="admin-modal">
+      <div class="modal-head"><div><span class="eyebrow">PRIVATE ACCESS / LOCAL DEMO</span><h2>CONTROL ROOM<span class="lime">.</span></h2></div><button class="close-btn" id="adminClose">×</button></div>
+      <div id="adminLock"><p class="micro-note">Enter the demo password to edit local content. Change this password in app.js before publishing.</p><label>ACCESS KEY</label><input type="password" id="adminPassword" placeholder="Enter password"><button class="lime-btn full" id="unlockAdmin">UNLOCK ↗</button><p class="micro-note">Demo password: <b>gridmode</b></p></div>
+      <div id="adminContent" class="hidden">
+        <div class="admin-tabs"><button class="active" data-tab="games">GAMES</button><button data-tab="ps5">PS5 VAULT</button><button data-tab="discoveries">DISCOVERIES</button></div>
+        <div class="admin-pane" id="pane-games"><label>ADD GAME NAME</label><input id="newGameName" placeholder="Game name"><label>DESCRIPTION</label><input id="newGameDesc" placeholder="One-line description"><label>GAME URL</label><input id="newGameUrl" placeholder="https://..."><button class="lime-btn full" id="addGame">ADD GAME +</button></div>
+        <div class="admin-pane hidden" id="pane-ps5"><label>ADD PS5 GAME</label><input id="newPs5Name" placeholder="Game title"><label>STATUS / CATEGORY</label><input id="newPs5Status" placeholder="PLAYING / FAVOURITE / WISHLIST"><button class="lime-btn full" id="addPs5">ADD TO VAULT +</button></div>
+        <div class="admin-pane hidden" id="pane-discoveries"><label>ADD DISCOVERY NAME</label><input id="newDiscoveryName" placeholder="Website name"><label>DESCRIPTION</label><input id="newDiscoveryDesc" placeholder="What makes it fun?"><label>WEBSITE URL</label><input id="newDiscoveryUrl" placeholder="https://..."><button class="lime-btn full" id="addDiscovery">ADD DISCOVERY +</button></div>
+        <p class="micro-note">Edits are saved in this browser only. This is a starter admin interface, not secure multi-user administration.</p>
+      </div>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
